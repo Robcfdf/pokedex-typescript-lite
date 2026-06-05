@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    /* Layout de arquivos */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Ambiente */
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    /* Mapas e declarações */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* Tipagem mais segura */
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Estilo e organização */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* Possibilidades futuras */
+    "jsx": "react-jsx",              // caso queira integrar React
+    "isolatedModules": true,         // útil para projetos maiores
+    "allowSyntheticDefaultImports": true,
+    "incremental": true              // compilações mais rápidas
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

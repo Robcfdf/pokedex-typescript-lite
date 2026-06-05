@@ -1,0 +1,30 @@
+{
+  "name": "pokedex-typescript-lite",
+  "version": "1.0.0",
+  "description": "Pokédex Lite em Node.js com TypeScript que consulta dados da PokeAPI e organiza resultados em um catálogo local.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "tsx src/main.ts",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Nenhum teste configurado ainda\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robcfdf/pokedex-typescript-lite.git"
+  },
+  "keywords": ["node", "typescript", "pokedex", "pokeapi"],
+  "author": "Robson",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Robcfdf/pokedex-typescript-lite/issues"
+  },
+  "homepage": "https://github.com/Robcfdf/pokedex-typescript-lite#readme",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
