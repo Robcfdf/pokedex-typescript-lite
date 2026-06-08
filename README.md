@@ -70,54 +70,64 @@ pokedex-typescript-lite/
 
 ## Entrada testada:
 
-pikachu 
-Saída obtida: 
-[OK] Pokémon encontrado: pikachu 
-#25 - pikachu | Tipos: electric | Altura: 4 | Peso: 60 
+ pokedex-typescript-lite@1.0.0 start
+ ts-node src/main.ts
 
-
-Busca inválida 
-Entrada testada: 
-pokemon-inexistente 
-Saída obtida: 
-[ERRO] Pokémon não encontrado. 
-Duplicidade 
-Entrada testada: 
-adicionar pikachu duas vezes 
-Saída obtida: 
-[AVISO] pikachu já está no catálogo. 
-Remoção
-
-Entrada testada: 
-remover ID 25 
-Saída obtida: 
-[OK] Pokémon removido do catálogo. 
+=== Pokédex TypeScript Lite ===
+[OK] Pokémon pikachu adicionado ao catálogo
+[OK] Pokémon bulbasaur adicionado ao catálogo
+=== Catálogo de Pokémons ===
+#25 - pikachu [electric]
+#1 - bulbasaur [grass, poison]
+[OK] Pokémon com ID 25 removido do catálogo
+=== Catálogo de Pokémons ===
+#1 - bulbasaur [grass, poison]
 
 ## Conceitos aplicados 
 
-TypeScript 
-Explique onde foram utilizados tipos, interfaces, parâmetros e retornos 
-tipados. 
+TypeScript  
+Utilizamos interfaces (PokemonApiResponse, PokemonResumo) para definir a estrutura dos dados.
+Os parâmetros e retornos das funções (buscarPokemon, adicionarPokemon) são tipados, garantindo segurança e clareza.
 
-Interface PokemonResumo 
-Explique o objetivo da interface criada para representar os dados 
-simplificados do Pokémon. 
+Interface PokemonResumo  
+Criada para representar os dados simplificados do Pokémon (id, nome, tipos, altura, peso).
+Isso facilita o uso no catálogo sem precisar lidar com toda a resposta da API.
 
-Fetch e async/await 
-Explique como a aplicação consulta a PokeAPI. 
+Fetch e async/await  
+A função buscarPokemon consulta a PokéAPI usando fetch.
+O uso de async/await garante que a aplicação espere a resposta antes de prosseguir.
 
-Tratamento de erros 
-Explique como o projeto lida com Pokémon inexistente ou erro de busca. 
+Tratamento de erros  
+Caso o Pokémon não seja encontrado (response.ok === false), exibimos [ERRO] Pokémon não encontrado.
+Também usamos try/catch para capturar falhas de rede ou exceções.
 
-Métodos de array 
-Informe onde foram usados map, filter, find, some, every, reduce ou 
-forEach. 
+Métodos de array
 
-Classe CatalogoPokemon 
-Explique quais atributos e métodos foram criados. 
+map → para extrair os tipos do Pokémon.
+
+filter → para remover Pokémon do catálogo.
+
+forEach → para listar os Pokémons no console.
+
+some → para evitar duplicidade ao adicionar.
+
+Classe CatalogoPokemon  
+Criamos a classe PokemonController (nosso catálogo), com:
+
+Atributo: catalogo (array de PokemonResumo).
+
+Métodos:
+
+adicionarPokemon(nome)
+
+listarPokemons()
+
+removerPokemon(id)
 
 Organização do Kanban 
 Link do Kanban: 
+
+https://github.com/users/Robcfdf/projects/4/views/1
 
 Branches utilizadas - main - develop - feat/pokedex - docs/readme 
 

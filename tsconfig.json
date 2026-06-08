@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                // versão moderna do JS
+    "module": "CommonJS",              // compatível com Node.js
+    "strict": true,                    // ativa checagens de tipo
+    "esModuleInterop": true,           // permite importar libs como axios
+    "skipLibCheck": true,              // ignora checagem de tipos em libs externas
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],                  // só compila arquivos dentro de src/
+  "exclude": ["node_modules"]          // ignora dependências
+}
